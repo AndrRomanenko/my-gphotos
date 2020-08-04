@@ -19,7 +19,7 @@ const Header = () => {
             <div className={styles.name}>{name}</div>
             <div className={styles.email}>{email}</div>
           </div>
-          <div className={styles.button} onClick={logout}>
+          <div className={styles.button} onClick={() => logout()}>
             Log out
           </div>
         </div>

@@ -6,6 +6,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
+
+  .infoContainer {
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
   .title {
     font-size: 25px;
   }

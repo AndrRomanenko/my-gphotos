@@ -10,13 +10,10 @@ const Home = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.loginWrp}>
-        <img
-          alt="gphoto"
-          src={gphotos}
-          width="90"
-          height="90"
-          onClick={() => dispatch(authorize())}
-        />
+        <img alt="gphoto" src={gphotos} onClick={() => dispatch(authorize())} />
+        <div className={styles.labelContainer}>
+          <span className={styles.label}>Sign in</span>
+        </div>
       </div>
     </div>
   );
