@@ -1,9 +1,11 @@
 import React from "react";
 import { Switch, BrowserRouter, Redirect } from "react-router-dom";
-// import { HomePage, AlbumsPage, PageNotFound, PhotosPage } from "../pages";
-import Home from "../pages/Home";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+
+//Pages
+import Home from "../pages/Home";
+import Albums from "../pages/Albums";
 
 const Routes = () => {
   return (
@@ -13,7 +15,7 @@ const Routes = () => {
           path="/albums/:id"
           component={() => <div>Photo page</div>}
         />
-        <PrivateRoute path="/albums" component={() => <div>Albums page</div>} />
+        <PrivateRoute path="/albums" component={Albums} />
         <PublicRoute path="/home" component={Home} exact />
         <Redirect exact from="/" to="/albums" />
         <PrivateRoute path="/*" component={() => <div>404</div>} />

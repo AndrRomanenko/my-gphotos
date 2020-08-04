@@ -2,10 +2,12 @@ import { combineReducers } from "redux";
 
 import common from "./common";
 import auth from "./auth";
+import albums from "./albums";
 
 const rootReducer = combineReducers({
   common,
   auth,
+  albums,
 });
 
 const appReducer = (state, action) =>

@@ -1,5 +1,5 @@
 import { createTypes } from "redux-compose-reducer";
-import { auth } from "../../utils/authHelper";
+import { auth } from "../../api";
 
 export const TYPES = createTypes("auth", [
   "setAuthStatus",

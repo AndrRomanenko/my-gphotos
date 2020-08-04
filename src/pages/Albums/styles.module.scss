@@ -1,0 +1,26 @@
+.albumsWrp {
+  padding: 25px 15px;
+
+  .header {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.wrapper {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  @media (max-width: 425px) {
+    margin: 0 5px;
+  }
+}
+
+.albumContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 15px 0;
+}
