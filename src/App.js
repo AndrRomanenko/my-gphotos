@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { init } from "./store/common/actions";
+import Script from "react-load-script";
+import Routes from "./routes/Routes";
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  const initApi = () => {
+    const initGapi = (isAuth) => dispatch(init(isAuth));
+    window.gapi && window.gapi.load("auth2:client", initGapi);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Script url="https://apis.google.com/js/api.js" onLoad={initApi} />
+      <Routes />
+    </>
   );
-}
+};
 
 export default App;
